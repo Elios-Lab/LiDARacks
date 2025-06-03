@@ -12,12 +12,12 @@ Python toolkit to generate physically-grounded LiDAR anomalies for robust sensor
 The toolkit requires numpy to work, and in our implementation the version is '1.26.3'.
 
 ```python
-// Example of LiDARacks
+# Example of LiDARacks
 import numpy as np
 import LiDARacks
-sph_path = "PATH\\TO\\sph_point_cloud.npy" //The spherical point clouds
+sph_path = "PATH\\TO\\sph_point_cloud.npy" #The spherical point clouds
 sph_point_cloud = np.load(save_path)
-severity_level = 3 //From 0 to 4
-type_of_noise = 'EMI' //EMI, Occlusion, Background, ZRB
+severity_level = 3 #From 0 to 4
+type_of_noise = 'EMI' #EMI, Occlusion, Background, ZRB
 new_sph_point_clouds = LiDARacks.lidaracks(sph_point_clouds,severity_level,type_of_noise)
 ```
